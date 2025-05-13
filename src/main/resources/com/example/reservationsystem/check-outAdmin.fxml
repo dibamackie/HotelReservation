@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="500.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.reservationsystem.controllers.CheckOutAdminController">
+    <children>
+        <!-- Navigation Bar -->
+        <Button fx:id="rulesBtn" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="104.0" text="Rules" onAction="#handleRulesAdmin" />
+        <Button fx:id="bookingBtn" layoutX="104.0" layoutY="0.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="104.0" text="Booking" onAction="#handleBookingAdmin" />
+        <Button fx:id="roomSelectionBtn" layoutX="208.0" layoutY="0.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="104.0" text="Room Selection" onAction="#handleRoomSelectionAdmin" />
+        <Button fx:id="reservationBtn" layoutX="312.0" layoutY="0.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="104.0" text="Reservation" onAction="#handleReservationAdmin" />
+        <Button fx:id="checkOutBtn" layoutX="416.0" layoutY="0.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="104.0" style="-fx-background-color: lightblue;" text="Check-out" onAction="#handleCheckOutAdmin" />
+        <Button fx:id="generateReportBtn" layoutX="520.0" layoutY="0.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="104.0" text="Generate Report" onAction="#handleGenerateReportAdmin" />
+        <Button fx:id="exitBtn" layoutX="624.0" layoutY="0.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="94.0" text="Exit" onAction="#handleExitAdmin" />
+
+        <!-- Search and Checkout Table -->
+        <TextField fx:id="searchField" layoutX="80.0" layoutY="121.0" prefHeight="25.0" prefWidth="286.0" promptText="Search by name or phone number" onAction="#handleSearch" />
+        <TableView fx:id="checkoutTable" layoutX="80.0" layoutY="154.0" prefHeight="200.0" prefWidth="587.0">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="77.71" text="Name" />
+                <TableColumn fx:id="phoneColumn" prefWidth="122.29" text="Phone Number" />
+                <TableColumn fx:id="roomIDColumn" prefWidth="80.57" text="Room ID" />
+                <TableColumn fx:id="checkInColumn" minWidth="8.67" prefWidth="159.43" text="Check-in" />
+                <TableColumn fx:id="checkOutColumn" prefWidth="185.14" text="Check-out" />
+            </columns>
+        </TableView>
+
+        <!-- Discount Field -->
+        <TextField fx:id="discountField" layoutX="80.0" layoutY="364.0" prefHeight="25.0" prefWidth="150.0" promptText="Enter Discount (%)" />
+
+        <!-- Checkout and Report Action -->
+        <Button fx:id="checkOutReportBtn" layoutX="412.0" layoutY="364.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="201.0" text="Check-out and Generate Report" onAction="#handleCheckOutAndGenerateReport" />
+
+        <!-- Feedback Reminder -->
+        <Label fx:id="feedbackReminderLabel" layoutX="80.0" layoutY="400.0" prefHeight="25.0" prefWidth="587.0" text="Reminder: Guest can now leave feedback at the kiosk." styleClass="message-label" visible="false" />
+
+        <!-- Confirmation/Error Message -->
+        <Label fx:id="messageLabel" layoutX="80.0" layoutY="435.0" prefHeight="25.0" prefWidth="587.0" styleClass="message-label" />
+    </children>
+</Pane>

@@ -1,0 +1,138 @@
+/* General Reset and Base Styles */
+.root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #f5f6fa; /* Light gray-blue background for a clean look */
+}
+
+/* Labels */
+Label {
+    -fx-text-fill: #2d3436; /* Dark gray for readability */
+    -fx-font-size: 14px;
+}
+
+Label.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0984e3; /* Vibrant blue for titles */
+}
+
+/* Text Fields */
+TextField {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dfe6e9; /* Subtle gray border */
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2d3436;
+}
+
+TextField:focused {
+    -fx-border-color: #0984e3; /* Blue highlight when focused */
+    -fx-border-width: 2px;
+}
+
+/* DatePicker */
+DatePicker {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dfe6e9;
+    -fx-border-radius: 5px;
+}
+
+DatePicker:focused {
+    -fx-border-color: #0984e3;
+}
+
+/* Buttons */
+Button {
+    -fx-background-color: #0984e3; /* Bright blue for primary actions */
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+}
+
+Button:hover {
+    -fx-background-color: #74b9ff; /* Lighter blue on hover */
+}
+
+Button:pressed {
+    -fx-background-color: #0652dd; /* Darker blue when clicked */
+}
+
+/* Highlighted Button (e.g., active tab like "Booking") */
+Button.highlighted {
+    -fx-background-color: #74b9ff; /* Light blue for active state */
+    -fx-font-weight: bold;
+}
+
+/* Cancel/Exit Buttons */
+Button.cancel {
+    -fx-background-color: #d63031; /* Red for cancel/exit */
+}
+
+Button.cancel:hover {
+    -fx-background-color: #ff7675; /* Lighter red on hover */
+}
+
+/* MenuButton (e.g., Number of Guests, Room Selection) */
+MenuButton {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dfe6e9;
+    -fx-border-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2d3436;
+}
+
+MenuButton:hover {
+    -fx-background-color: #ecf0f1;
+}
+
+MenuItem {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2d3436;
+}
+
+MenuItem:hover {
+    -fx-background-color: #74b9ff;
+    -fx-text-fill: #ffffff;
+}
+
+/* TableView */
+TableView {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dfe6e9;
+    -fx-border-radius: 5px;
+}
+
+.table-view .column-header {
+    -fx-background-color: #0984e3;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f1f2f6; /* Light gray for alternating rows */
+}
+
+.table-row-cell:even {
+    -fx-background-color: #ffffff;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #74b9ff; /* Blue highlight on hover */
+}
+
+/* Specific Tweaks for Kiosk Welcome Screen */
+.welcome-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0984e3;
+    -fx-effect: dropshadow(gaussian, #dfe6e9, 10, 0, 0, 2); /* Subtle shadow */
+}
+
+/* Error Messages */
+.error-label {
+    -fx-text-fill: #d63031; /* Red for errors */
+    -fx-font-size: 12px;
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="500.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.reservationsystem.controllers.GuestSearchAdminController">
+    <children>
+        <!-- Navigation Buttons -->
+        <Button fx:id="guestSearchBtn" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#handleGuestSearchAdmin" prefHeight="66.0" prefWidth="104.0" style="-fx-background-color: lightblue;" text="Search Guest" />
+        <Button fx:id="bookingBtn" layoutX="104.0" layoutY="0.0" mnemonicParsing="false" onAction="#handleBookingAdmin" prefHeight="66.0" prefWidth="104.0" text="Booking" />
+        <Button fx:id="reservationBtn" layoutX="208.0" layoutY="0.0" mnemonicParsing="false" onAction="#handleReservationAdmin" prefHeight="66.0" prefWidth="104.0" text="Reservation" />
+        <Button fx:id="roomSelectionBtn" layoutX="312.0" layoutY="0.0" mnemonicParsing="false" onAction="#handleRoomSelectionAdmin" prefHeight="66.0" prefWidth="104.0" text="Room Selection" />
+        <Button fx:id="checkOutBtn" layoutX="416.0" layoutY="0.0" mnemonicParsing="false" onAction="#handleCheckOutAdmin" prefHeight="66.0" prefWidth="104.0" text="Check-out" />
+        <Button fx:id="generateReportBtn" layoutX="520.0" layoutY="0.0" mnemonicParsing="false" onAction="#handleGenerateReportAdmin" prefHeight="66.0" prefWidth="104.0" text="Generate Report" />
+        <Button fx:id="rulesBtn" layoutX="624.0" layoutY="0.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="94.0" text="Rules" onAction="#handleRulesAdmin" />
+        <Button fx:id="exitBtn" layoutX="624.0" layoutY="66.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="94.0" text="Exit" onAction="#handleExitAdmin" />
+
+        <!-- Search Field -->
+        <TextField fx:id="searchField" layoutX="80.0" layoutY="121.0" prefHeight="25.0" prefWidth="232.0" promptText="Search by name or phone number" onAction="#handleSearch" />
+
+        <!-- Reservations Table -->
+        <TableView fx:id="reservationTable" layoutX="17.0" layoutY="154.0" prefHeight="200.0" prefWidth="653.0">
+            <columns>
+                <TableColumn fx:id="resIDColumn" prefWidth="92.57" text="ReservationID" />
+                <TableColumn fx:id="guestNameColumn" prefWidth="143.43" text="Guest Name" />
+                <TableColumn fx:id="phoneColumn" prefWidth="116.0" text="Phone Number" />
+                <TableColumn fx:id="guestIDColumn" minWidth="8.67" prefWidth="110.29" text="GuestID" />
+                <TableColumn fx:id="checkInColumn" prefWidth="93.71" text="Check-in" />
+                <TableColumn fx:id="checkOutColumn" prefWidth="84.0" text="Check-out" />
+            </columns>
+        </TableView>
+
+        <!-- Action Buttons -->
+        <Button fx:id="cancelReservationBtn" layoutX="340.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleCancelReservation" prefHeight="25.0" prefWidth="126.0" text="Cancel Reservation" />
+        <Button fx:id="checkInResBtn" layoutX="480.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleCheckInReservation" prefHeight="25.0" prefWidth="150.0" text="Check-in a Reservation" />
+
+        <!-- Confirmation/Error Message -->
+        <Label fx:id="messageLabel" layoutX="17.0" layoutY="400.0" prefHeight="25.0" prefWidth="653.0" styleClass="message-label" />
+    </children>
+</Pane>

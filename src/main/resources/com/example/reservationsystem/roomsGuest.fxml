@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="500.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservationsystem.controllers.RoomsGuestController">
+    <children>
+        <!-- Navigation Bar -->
+        <Button fx:id="bookingBtn" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#handleBookingGuest" prefHeight="66.0" prefWidth="145.0" text="Booking" />
+        <Button fx:id="roomSelectionBtn" layoutX="145.0" layoutY="0.0" mnemonicParsing="false" onAction="#handleRoomSelectionGuest" prefHeight="66.0" prefWidth="145.0" style="-fx-background-color: lightblue;" text="Room Selection" />
+        <Button fx:id="reservationBtn" layoutX="290.0" layoutY="0.0" mnemonicParsing="false" onAction="#handleReservationGuest" prefHeight="66.0" prefWidth="145.0" text="Reservation" />
+        <Button fx:id="paymentBtn" layoutX="435.0" layoutY="0.0" mnemonicParsing="false" onAction="#handlePaymentGuest" prefHeight="66.0" prefWidth="145.0" text="Payment Detail" />
+        <Button fx:id="exitBtn" layoutX="580.0" layoutY="0.0" mnemonicParsing="false" onAction="#handleExitAdmin" prefHeight="66.0" prefWidth="139.0" text="Exit" />
+
+        <!-- Title and Subtitles -->
+        <Label layoutX="60.0" layoutY="80.0" styleClass="title" text="Select Your Room">
+            <font>
+                <Font name="Arial Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="60.0" layoutY="110.0" styleClass="subtitle" text="Green = Available, Red = Booked" />
+
+        <!-- Floor and Room Selection -->
+        <VBox fx:id="floorContainer" layoutX="60.0" layoutY="150.0" prefWidth="602.0" spacing="20">
+            <!-- Floor 1 -->
+            <HBox spacing="20">
+                <Label prefWidth="100.0" styleClass="floor-label" text="Floor 1" />
+                <Button fx:id="room101" onAction="#handleSelectRoom" prefWidth="200.0" styleClass="room-button" text="101 - Single" />
+                <Button fx:id="room102" onAction="#handleSelectRoom" prefWidth="200.0" styleClass="room-button" text="102 - Double" />
+            </HBox>
+            <!-- Floor 2 -->
+            <HBox spacing="20">
+                <Label prefWidth="100.0" styleClass="floor-label" text="Floor 2" />
+                <Button fx:id="room201" onAction="#handleSelectRoom" prefWidth="200.0" styleClass="room-button" text="201 - Deluxe" />
+                <Button fx:id="room202" onAction="#handleSelectRoom" prefWidth="200.0" styleClass="room-button" text="202 - Single" />
+            </HBox>
+            <!-- Floor 3 -->
+            <HBox spacing="20">
+                <Label prefWidth="100.0" styleClass="floor-label" text="Floor 3" />
+                <Button fx:id="room301" onAction="#handleSelectRoom" prefWidth="200.0" styleClass="room-button" text="301 - Double" />
+                <Button fx:id="room302" onAction="#handleSelectRoom" prefWidth="200.0" styleClass="room-button" text="302 - Penthouse" />
+            </HBox>
+            <!-- Floor 4 -->
+            <HBox spacing="20">
+                <Label prefWidth="100.0" styleClass="floor-label" text="Floor 4" />
+                <Button fx:id="room401" onAction="#handleSelectRoom" prefWidth="200.0" styleClass="room-button" text="401 - Single" />
+                <Button fx:id="room402" onAction="#handleSelectRoom" prefWidth="200.0" styleClass="room-button" text="402 - Deluxe" />
+            </HBox>
+            <!-- Floor 5 -->
+            <HBox spacing="20">
+                <Label prefWidth="100.0" styleClass="floor-label" text="Floor 5" />
+                <Button fx:id="room501" onAction="#handleSelectRoom" prefWidth="200.0" styleClass="room-button" text="501 - Penthouse" />
+                <Button fx:id="room502" onAction="#handleSelectRoom" prefWidth="200.0" styleClass="room-button" text="502 - Double" />
+            </HBox>
+        </VBox>
+
+        <!-- Confirmation/Error Message -->
+        <Label fx:id="messageLabel" layoutX="60.0" layoutY="410.0" prefHeight="25.0" prefWidth="602.0" styleClass="message-label" />
+    </children>
+</Pane>

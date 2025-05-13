@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="600.0" prefWidth="725.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.reservationsystem.controllers.CheckOutGuestController">
+    <children>
+        <!-- Navigation Bar -->
+        <Button fx:id="bookingBtn" layoutX="2.0" layoutY="0.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="144.0" text="Booking" onAction="#handleBookingGuest" />
+        <Button fx:id="reservationBtn" layoutX="146.0" layoutY="0.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="144.0" text="Reservation Detail" onAction="#handleReservationGuest" />
+        <Button fx:id="roomSelectionBtn" layoutX="290.0" layoutY="0.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="156.0" text="Room Selection" onAction="#handleRoomSelectionGuest" />
+        <Button fx:id="paymentBtn" layoutX="445.0" layoutY="0.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="144.0" style="-fx-background-color: lightblue;" text="Feedback" onAction="#handlePaymentGuest" />
+        <Button fx:id="rulesBtn" layoutX="589.0" layoutY="0.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="133.0" text="Rules" onAction="#handleRulesGuest" />
+        <Button fx:id="exitBtn" layoutX="589.0" layoutY="66.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="133.0" text="Exit" onAction="#handleExitGuest" />
+
+        <!-- Title -->
+        <Label layoutX="31.0" layoutY="93.0" styleClass="welcome-label" text="Your Reservation Details">
+            <font>
+                <Font name="Arial Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <!-- Guest Details -->
+        <Label layoutX="50" layoutY="150" text="Guest Name:" />
+        <TextField fx:id="guestNameField" editable="false" layoutX="150" layoutY="145" prefWidth="200" />
+        <Label layoutX="50" layoutY="180" text="Number of Guests:" />
+        <TextField fx:id="numGuestsField" editable="false" layoutX="150" layoutY="175" prefWidth="200" />
+        <Label layoutX="50" layoutY="210" text="Check-in Date:" />
+        <TextField fx:id="checkInField" editable="false" layoutX="150" layoutY="205" prefWidth="200" />
+        <Label layoutX="50" layoutY="240" text="Check-out Date:" />
+        <TextField fx:id="checkOutField" editable="false" layoutX="150" layoutY="235" prefWidth="200" />
+
+        <!-- Room Details -->
+        <Label layoutX="400" layoutY="150" text="Room(s):" />
+        <TextField fx:id="roomDetailsField" editable="false" layoutX="463.0" layoutY="146.0" prefWidth="200" />
+
+        <!-- Payment Details -->
+        <Label layoutX="50" layoutY="280" styleClass="subtitle" text="Payment Summary">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="50" layoutY="310" text="Total Stay Cost:" />
+        <TextField fx:id="totalCostField" editable="false" layoutX="150" layoutY="305" prefWidth="150" />
+        <Label layoutX="50" layoutY="340" text="Deposit (15%):" />
+        <TextField fx:id="depositField" editable="false" layoutX="150" layoutY="335" prefWidth="150" />
+        <Label layoutX="334.0" layoutY="310.0" text="Balance Due at Check-in:" />
+        <TextField fx:id="balanceDueField" editable="false" layoutX="463.0" layoutY="305.0" prefHeight="25.0" prefWidth="188.0" />
+
+        <!-- Feedback Section -->
+        <Label layoutX="50" layoutY="380" styleClass="subtitle" text="Leave Your Feedback">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="50" layoutY="410" text="Rating (*)" styleClass="required-label" />
+        <ComboBox fx:id="ratingComboBox" layoutX="150" layoutY="405" prefWidth="150" promptText="Select Rating" />
+        <Label layoutX="50" layoutY="440" text="Comments" />
+        <TextArea fx:id="commentsField" layoutX="150" layoutY="435" prefHeight="80" prefWidth="400" wrapText="true" />
+
+        <!-- Action Buttons -->
+        <Button fx:id="submitFeedbackBtn" layoutX="397.0" layoutY="530.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Submit Feedback" onAction="#handleSubmitFeedback" />
+        <Button fx:id="exitFeedbackBtn" layoutX="539.0" layoutY="530.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Exit" onAction="#handleExitGuest" />
+
+        <!-- Confirmation/Error Message -->
+        <Label fx:id="messageLabel" layoutX="50" layoutY="565" prefHeight="25" prefWidth="600" styleClass="message-label" />
+    </children>
+<!--    <stylesheets>-->
+<!--        <URL value="@../styles.css" />-->
+<!--    </stylesheets>-->
+</Pane>
